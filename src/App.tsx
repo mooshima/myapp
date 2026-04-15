@@ -1,6 +1,21 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Navbar from "./components/Navbar"
+import Skills from "./pages/Skills"
+
 function App() {
   return (
-    <h1>Hello React 🚀🔥</h1>
+    <BrowserRouter>
+      <Navbar />
+      <div className="pt-20">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+<Route path="/skills" element={<Skills />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 
